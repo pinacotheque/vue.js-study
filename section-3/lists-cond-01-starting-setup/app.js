@@ -9,6 +9,9 @@ const app = Vue.createApp({
   methods: {
     addGoal() {
       this.goals.push(this.addedGoals)
+    },
+    removeGoal(index) {
+      this.goals.splice(index, 1)
     }
   }
 });
