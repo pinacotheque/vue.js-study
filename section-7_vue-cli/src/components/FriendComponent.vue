@@ -7,8 +7,11 @@
             <li>Phone: {{phoneNumber}}</li>
             <li>Email: {{emailAddress}}</li>
         </ul>
+        <button @click="$emit('delete',id)">Delete</button>
     </li>
 </template>
+
+
 <script>
 export default {
     props: {
@@ -33,7 +36,7 @@ export default {
             required: false,
         }
     },
-    emits: ['toggle-fav'],
+    emits: ['toggle-fav', 'delete'],
     data(){
         return{
             visible: false,
@@ -45,7 +48,10 @@ export default {
         },
         toggleFav() {
             this.$emit('toggle-fav', this.id)
-        }
+        },
+        // deleteFriend() {
+        //     this.$emit('delete')
+        // }
     }
 }
 </script>
