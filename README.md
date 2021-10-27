@@ -57,6 +57,8 @@ emit events to parent element
 
 why in app.vue props should be kebab-case
 
+Section-7 ->> switched to vue CLI
+
 ## Tuesday
 
 provide-inject method
